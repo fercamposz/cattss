@@ -1,0 +1,8 @@
+export default function Menu() {
+  return (
+    <header className="menu">
+      <h1> ADOAÇÕES DE GATO</h1>
+      <p>Encontre seu novo melhor amigo(a)</p>
+    </header>
+  );
+}
