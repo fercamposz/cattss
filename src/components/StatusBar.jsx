@@ -1,3 +1,4 @@
+import React from 'react';
 import cats from "../data/Cats";
 
 export default function StatusBar({ totalFavs, onToggleTema, tema }) {
@@ -11,7 +12,7 @@ export default function StatusBar({ totalFavs, onToggleTema, tema }) {
         <span>Adote com amor :D</span>
       </div>
       <button className="theme-toggle-btn" onClick={onToggleTema}>
-        {tema === "light" ? "🌙" : "☀️"}
+        {tema === 'light' ? '🌙' : '☀️'}
       </button>
     </section>
   );
