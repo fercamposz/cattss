@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaStar, FaRegStar } from "react-icons/fa";
 
-export default function CardCats({ cat, onFavoritar, onAdotar }) {
+function CardCats({ cat, onFavoritar, onAdotar }) {
   const [isFav, setIsFav] = useState(false);
 
   function handleFavoritar() {
@@ -37,3 +37,5 @@ export default function CardCats({ cat, onFavoritar, onAdotar }) {
     </div>
   );
 }
+
+export default CardCats;
