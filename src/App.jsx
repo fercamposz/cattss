@@ -3,7 +3,7 @@ import cats from "./data/Cats";
 import StatusBar from "./components/StatusBar";
 import CardCats from "./components/CardCats";
 import ModalAdocao from "./components/ModalAdocao";
-import pataImg from "./assets/pata.png"; 
+import pataImg from "./assets/pata.png";
 import gatofone from "./assets/gatofone.svg";
 import "./App.css";
 
@@ -32,12 +32,13 @@ export default function App() {
 
       {/* HERO */}
       <header className="hero">
+        <div className="hero-image">
+          <img src={gatofone} alt="Gato de fone" />
+        </div>
         <div className="hero-container">
-          <div className="hero-image">
-            <img src={gatofone} alt="Gato de fone" />
-          </div>
+
           <div className="hero-content">
-            <h1>Adote gatinhos aqui!</h1>
+            <h1>ADOTE GATINHOS</h1>
 
             <div className="search-box">
               <span className="search-icon">🐾</span>
@@ -51,7 +52,7 @@ export default function App() {
             </div>
           </div>
 
-          
+
         </div>
       </header>
 

@@ -6,9 +6,7 @@ export default function StatusBar({ totalFavs, onToggleTema, tema }) {
     <section className="status-container">
       <div className="status-bar-pill">
         <span><strong>{cats.length}</strong> Gatinhos disponíveis</span>
-        <span className="divider">|</span>
         <span><strong>{totalFavs}</strong> Favoritados</span>
-        <span className="divider">|</span>
         <span>Adote com amor :D</span>
       </div>
       <button className="theme-toggle-btn" onClick={onToggleTema}>
