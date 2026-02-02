@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaStar, FaRegStar } from "react-icons/fa";
 
-function CardCats({ cat, onFavoritar, onAdotar }) {
+export default function CardCats({ cat, onFavoritar, onAdotar }) {
   const [isFav, setIsFav] = useState(false);
 
   function handleFavoritar() {
@@ -11,31 +11,34 @@ function CardCats({ cat, onFavoritar, onAdotar }) {
   }
 
   return (
-    <div className="cat-card">
+ 
+    <article className="catCard">
+ 
       <button
-        className={`fav-btn ${isFav ? "active" : ""}`}
+        className={`favBtn ${isFav ? "active" : ""}`}
         onClick={handleFavoritar}
       >
         {isFav ? <FaStar /> : <FaRegStar />}
       </button>
 
-      <div className="cat-image-container">
+   
+      <figure className="catImageContainer">
         <img src={cat.image} alt={cat.name} />
-      </div>
+      </figure>
 
-      <div className="cat-info">
+     
+      <div className="catInfo">
         <h3>{cat.name}</h3>
         <p>{cat.description}</p>
 
+      
         <button
-          className="adopt-btn"
+          className="adoptBtn"
           onClick={() => onAdotar(cat)}
         >
           Adotar
         </button>
       </div>
-    </div>
+    </article>
   );
 }
-
-export default CardCats;

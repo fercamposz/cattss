@@ -1,10 +1,11 @@
 import cats from "../data/Cats";
 import { IoMoon, IoSunny } from "react-icons/io5";
 
-function StatusBar({ totalFavs, onToggleTema, tema }) {
+export function StatusBar({ totalFavs, onToggleTema, tema }) {
   return (
-    <section className="status-container">
-      <div className="status-bar-pill">
+    <section className="statusContainer">
+   
+      <div className="statusBarPill">
         <span>
           <strong>{cats.length}</strong> Gatinhos disponíveis
         </span>
@@ -17,10 +18,12 @@ function StatusBar({ totalFavs, onToggleTema, tema }) {
       </div>
 
       <button
-        className={`theme-toggle-btn ${tema}`}
+    
+        className={`themeToggleBtn ${tema}`}
         onClick={onToggleTema}
       >
-        <div className="icon-wrapper">
+      
+        <div className="iconWrapper">
           {tema === "light" ? <IoMoon /> : <IoSunny />}
         </div>
 
@@ -31,5 +34,3 @@ function StatusBar({ totalFavs, onToggleTema, tema }) {
     </section>
   );
 }
-
-export { StatusBar };

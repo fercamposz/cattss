@@ -1,1 +1,8 @@
-import { useState } from "react"; import cats from "./data/Cats"; import { StatusBar } from "./components/StatusBar"; import CardCats from "./components/CardCats"; import ModalAdocao from "./components/ModalAdocao"; import pataImg from "./assets/pata.png"; import gatofone from "./assets/gatofone.svg"; import "./App.css"; export default function App() { const [totalFavs, setTotalFavs] = useState(0); const [busca, setBusca] = useState(""); const [tema, setTema] = useState("light"); const [gatoSelecionado, setGatoSelecionado] = useState(null); const gatosFiltrados = cats.filter(cat => cat.name.toLowerCase().includes(busca.toLowerCase()) ); return ( <div className="app-container" data-theme={tema}> <img src={pataImg} className="pata decor-1" alt="pata" /> <StatusBar totalFavs={totalFavs} tema={tema} onToggleTema={() => setTema(tema === "light" ? "dark" : "light") } /> {/* HERO */} <header className="hero"> <div className="hero-content"> <h1>ADOTE GATINHOS</h1> </div> <div className="hero-image"> <img src={gatofone} alt="Gato de fone" /> </div> <div className="hero-container"> <div className="search-box"> <span className="search-icon">🐾</span> <input type="text" placeholder="Buscar gatinho..." className="search-input" value={busca} onChange={(e) => setBusca(e.target.value)} /> </div> </div> </header> <h2 className="section-title">Gatinhos</h2> {/* CATÁLOGO */} <main className="catalog"> {gatosFiltrados.map(cat => ( <CardCats key={cat.id} cat={cat} onFavoritar={(val) => setTotalFavs(prev => prev + val) } onAdotar={setGatoSelecionado} /> ))} </main> <ModalAdocao cat={gatoSelecionado} onClose={() => setGatoSelecionado(null)} /> </div> ); }
+import Home from "./components/Home";
+import "./App.css";
+
+export default function App() {
+  return (
+    <Home />
+  );
+}

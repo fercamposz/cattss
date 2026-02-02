@@ -1,21 +1,28 @@
-function Hero({ busca, setBusca, gatoFone }) {
+export default function Hero({ busca, setBusca, gatoFone }) {
   return (
     <header className="hero">
-      <div className="hero-content">
+     
+      <div className="heroContent">
         <h1>ADOTE GATINHOS</h1>
       </div>
 
-      <div className="hero-image">
+
+      <div className="heroImage">
         <img src={gatoFone} alt="Gato de fone" />
       </div>
 
-      <div className="hero-container">
-        <div className="search-box">
-          <span className="search-icon">🐾</span>
+     
+      <div className="heroContainer">
+    
+        <div className="searchBox">
+
+          <span className="searchIcon">🐾</span>
+          
+          
           <input
             type="text"
             placeholder="Buscar gatinho..."
-            className="search-input"
+            className="searchInput"
             value={busca}
             onChange={(e) => setBusca(e.target.value)}
           />
@@ -24,5 +31,3 @@ function Hero({ busca, setBusca, gatoFone }) {
     </header>
   );
 }
-
-export default Hero;

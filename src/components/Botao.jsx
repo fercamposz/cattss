@@ -1,1 +1,7 @@
-export default function Botao({ texto }) { return ( <button className="adopt-btn"> {texto} </button> ); }
+export default function Botao({ texto }) {
+  return (
+    <button className="adoptBtn">
+      {texto}
+    </button>
+  );
+}
