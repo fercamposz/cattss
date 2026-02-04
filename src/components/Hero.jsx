@@ -6,18 +6,15 @@ export default function Hero({ busca, setBusca, gatoFone }) {
         <h1>ADOTE GATINHOS</h1>
       </div>
 
-
       <div className="heroImage">
         <img src={gatoFone} alt="Gato de fone" />
       </div>
 
-     
       <div className="heroContainer">
     
         <div className="searchBox">
 
           <span className="searchIcon">🐾</span>
-          
           
           <input
             type="text"

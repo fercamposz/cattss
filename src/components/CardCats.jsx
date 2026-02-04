@@ -9,9 +9,7 @@ export default function CardCats({ cat, onFavoritar, onAdotar }) {
     setIsFav(novoEstado);
     onFavoritar(novoEstado ? 1 : -1);
   }
-
   return (
- 
     <article className="catCard">
  
       <button
@@ -20,17 +18,14 @@ export default function CardCats({ cat, onFavoritar, onAdotar }) {
       >
         {isFav ? <FaStar /> : <FaRegStar />}
       </button>
-
    
       <figure className="catImageContainer">
         <img src={cat.image} alt={cat.name} />
       </figure>
-
      
       <div className="catInfo">
         <h3>{cat.name}</h3>
         <p>{cat.description}</p>
-
       
         <button
           className="adoptBtn"

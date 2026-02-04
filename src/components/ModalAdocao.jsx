@@ -6,13 +6,10 @@ export default function ModalAdocao({ cat, onClose }) {
   }
 
   return (
- 
     <div className="modalOverlay" onClick={onClose}>
-      
 
       <div className="modalContent" onClick={handleContentClick}>
         
-      
         <button className="closeModalBtn" onClick={onClose}>
           &times;
         </button>
